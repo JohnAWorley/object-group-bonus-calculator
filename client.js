@@ -25,3 +25,37 @@ const employees = [ atticus, jem, scout, robert, mayella ]; // this is an array 
 // Ask questions when you don't.
 
 console.log( employees );
+
+
+for (let i = 0; i < employees.length; i++ ) {
+    bonusCalculation(employees[i]);
+}
+
+function bonusCalculation(employee){
+  console.log('Looking at employee', employee);
+  //let name = employee.name;
+  let total = 0;
+  if (employee.reviewRating <= 2) {
+    let total = employee.annualSalary*(0);
+    }
+   else if (employee.reviewRating === 3) {
+    let total = employee.annualSalary*.04;
+    
+    }
+    else if (employee.reviewRating === 4) {
+      let total = employee.annualSalary*.06;
+    }
+    else if (employee.reviewRating === 5) {
+      let total = employee.annualSalary*.10;
+    }
+ 
+} //  bonus calculation 
+
+class Bonus{
+  constructor(name, bonusPercentage, totalCompensation, totalBonus){
+    this.name = name;
+    this.bonusPercentage = bonusPercentage;
+    this.totalCompensation = totalCompensation;
+    this.totalBonus = totalBonus;
+  }
+}
